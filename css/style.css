@@ -13,25 +13,20 @@ font-family: 'Nunito', sans-serif;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #f2f2f1;
     font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
 
 }
 
 main {
+    height: 100vh;
+    width: 100vw;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 200px 300px;
+    grid-template-rows: 50%;
     grid-template-areas: "partOne partOne" "partTwo partThree";
-    max-width: 650px;
-    min-width: 350px;
     box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.158);
-    border-radius: 10px;
 }
 
 h2 {
@@ -80,7 +75,6 @@ p {
     background-color: #4999bd;
     grid-area: partTwo;
     color: white;
-    border-bottom-left-radius: 10px;
 }
 
 
@@ -105,7 +99,6 @@ p.p2-2 {
     background-color: #4998bddc;
     grid-area: partThree;
     color : white;
-    border-bottom-right-radius: 10px;
 }
 
 p.p1-3 {
@@ -116,7 +109,7 @@ button {
     display: block;
     padding: 15px;
     margin: 30px auto;
-    width: 100%;
+    width: 90%;
     background-color: #c5e530;
     color: white;
     font-family: 'Nunito', sans-serif;
@@ -140,34 +133,13 @@ button:active {
     transition: 0.1s;
 }
 
-@media screen and (max-width: 650px){
-      main {
-        height: 100%;
-        width: 100%;
-        border-radius: 0;
-        
-       }
-
-       .partTwo, .partThree {
-        height: 103%;
-        border-radius: 0;
-       }
-}
-
 @media screen and (max-width: 602px) {
 
-    body {
-        overflow-x: hidden;
-    }
     main {
         grid-template-columns: 100%;
-        grid-template-rows: 300px 250px 250px;
+        grid-template-rows: 300px 300px 300px;
         grid-template-areas: "partOne" "partTwo" "partThree";
-    }
-
-    .partThree {
-        margin-top: 5em;
-    }
+    }   
 }
 
 
